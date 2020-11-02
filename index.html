@@ -6,29 +6,34 @@
     <title>Lingo</title>
     <script src="./app.js" ></script>
     <link rel="stylesheet" href="style.css" >
+    <link rel="shortcut icon" href="#" />
 </head>
 <body>
+    <audio id="audioIntro">
+        <source src="./audio/intro.mp3" type="audio/mpeg">
+    </audio>
+    
     <div class="header" >
-        <img class="logo" src="./images/logo.jpg" >
+        <img class="logo" src="./images/logo.jpg" onclick="playIntro()" >
     </div>
     <div class="row-container" id="row-container-1" >
         <div class="row" id="row-1" >
                 <div class="letter-div letter-div-1" id="letter-div-1-1" >
-                    <input type="text" class="letter" id="letter-1-1" maxlength="1" placeholder="." disabled>
+                    <input type="text" class="letter" id="letter-1-1" maxlength="1" placeholder="" disabled>
                 </div>
                 <div class="letter-div letter-div-1" id="letter-div-1-2" >
-                    <input type="text" class="letter" id="letter-1-2" maxlength="1" placeholder="." onkeypress="changeFocus('1','2')" autofocus>
+                    <input type="text" class="letter" id="letter-1-2" maxlength="1" placeholder="" onkeypress="changeFocus('1','2')" autofocus>
                 </div>
                 <div class="letter-div letter-div-1" id="letter-div-1-3" >
-                    <input type="text" class="letter" id="letter-1-3" maxlength="1" placeholder="." onkeypress="changeFocus('1','3')" >
+                    <input type="text" class="letter" id="letter-1-3" maxlength="1" placeholder="" onkeypress="changeFocus('1','3')" >
                 </div>
                 <div class="letter-div letter-div-1" id="letter-div-1-4" >
-                    <input type="text" class="letter" id="letter-1-4" maxlength="1" placeholder="." onkeypress="changeFocus('1','4')" >
+                    <input type="text" class="letter" id="letter-1-4" maxlength="1" placeholder="" onkeypress="changeFocus('1','4')" >
                 </div>
                 <div class="letter-div letter-div-1" id="letter-div-1-5" >
-                    <input type="text" class="letter" id="letter-1-5" maxlength="1" placeholder="." >
+                    <input type="text" class="letter" id="letter-1-5" maxlength="1" placeholder="" >
                 </div>
-                <div class="submit-div" id="submit-div-1" onclick="submitRow('1')" >
+                <div class="submit-div" id="submit-div-1" onclick="getInputLetters('1')" >
                 </div>
         </div>
         <div class="row" id="row-2" >
@@ -47,7 +52,7 @@
             <div class="letter-div letter-div-2" id="letter-div-2-5" >
                 <input type="text" class="letter" id="letter-2-5" maxlength="1" placeholder="" >
             </div>
-            <div class="submit-div" id="submit-div-2" onclick="submitRow('2')" >
+            <div class="submit-div" id="submit-div-2" onclick="getInputLetters(2)" >
             </div>
         </div>
         <div class="row" id="row-3" >
@@ -66,7 +71,7 @@
             <div class="letter-div letter-div-3" id="letter-div-3-5" >
                 <input type="text" class="letter" id="letter-3-5" maxlength="1" placeholder="" >
             </div>
-            <div class="submit-div" id="submit-div-3" onclick="submitRow('3')" >
+            <div class="submit-div" id="submit-div-3" onclick="getInputLetters(3)" >
             </div>
         </div>
         <div class="row" id="row-4" >
@@ -85,7 +90,7 @@
             <div class="letter-div letter-div-4" id="letter-div-4-5" >
                 <input type="text" class="letter" id="letter-4-5" maxlength="1" placeholder="" >
             </div>
-            <div class="submit-div" id="submit-div-4" onclick="submitRow('4')" >
+            <div class="submit-div" id="submit-div-4" onclick="getInputLetters(4)" >
             </div>
         </div>
         <div class="row" id="row-5" >
@@ -104,14 +109,9 @@
             <div class="letter-div letter-div-5" id="letter-div-5-5" >
                 <input type="text" class="letter" id="letter-5-5" maxlength="1" placeholder="" >
             </div>
-            <div class="submit-div" id="submit-div-5" onclick="submitRow('5')" >
+            <div class="submit-div" id="submit-div-5" onclick="getInputLetters(5)" >
             </div>
         </div>
     </div>
-    <div class="reset-container">
-        <button class="reset" onclick="resetButton()" >RESET</button>
-        <button class="reset" onclick="testButton()" >TEST</button>
-    </div>   
-
 </body>
 </html>

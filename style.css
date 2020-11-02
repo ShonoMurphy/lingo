@@ -1,6 +1,7 @@
 .header {
     display: flex;
     justify-content: center;
+    padding-left: 15px;
 }
 .logo {
     max-width: 30%;
@@ -74,14 +75,16 @@
 }
 
 .reset {
-    margin-top: 20px;
-    margin-right: 5px;
+    margin-top: 25px;
+    margin-left: 15px;
     border: none;
     background-color: #1e76b6;
     color: white;
+    text-align: center;
     font-weight: bold;
-    height: 40px;
-    width: 80px;
+    font-size: 30px;
+    height: 60px;
+    width: 100px;
 }
 
 .reset:hover {
@@ -90,4 +93,8 @@
 
 .reset:active {
     background-color: #f3dc36;
+}
+
+.reset:focus {
+    outline: none;
 }
