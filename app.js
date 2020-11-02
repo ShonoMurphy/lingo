@@ -104,14 +104,16 @@ function checkEmptyLetters(empty) {
 
 //Take values from row and put in inputLetters array
 function getInputLetters(rowid) {
-    for (i = 1; i < 6; i++) {
-        inputLetters[i-1] = document.getElementById('letter-' + rowid + '-' + i).value.toLowerCase();
-    }
-    let isEmptyLetters = inputLetters.some(checkEmptyLetters);
-    if (isEmptyLetters == true) {
+    if (rowid == currentRow) {
+        for (i = 1; i < 6; i++) {
+            inputLetters[i-1] = document.getElementById('letter-' + rowid + '-' + i).value.toLowerCase();
+        }
+        let isEmptyLetters = inputLetters.some(checkEmptyLetters);
+        if (isEmptyLetters == true) {
         errorBlink(rowid);
-    } else {
+        } else {
         checkCorrectPosition(rowid);
+        }
     }
 }
 
@@ -194,8 +196,12 @@ function prepareNextRow() {
     }
     let startPosition = correctPosition.indexOf(false,1) + 1;
     document.getElementById('letter-' + currentRowUp +  '-' + startPosition).focus();
+    inputLetters = ['','','','',''];
+    correctPosition = [true,false,false,false,false];
+    wrongPosition = [false,false,false,false,false];
     currentRow++;
     currentRowUp++;
+
 }
 
 
