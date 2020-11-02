@@ -1,24 +1,93 @@
 .header {
     display: flex;
     justify-content: center;
-    align-items: center;
 }
 .logo {
     max-width: 30%;
 }
 
 .row {
-    background-color: blue;
+    margin: auto;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    float: center;
-    width: 500px;
+    width: 600px;
+    height: 100px;
+    padding-left: 86px;
+    border: none;
+}
+
+.letter-div {
+    background-color: #1e76b6;
+    background-image: null;
+    background-size: null;
+    border-top: 2px;
+    border-color: white;
+    border-style: solid;
+    width: 100px;
     height: 100px;
 }
 
-.row > div {
-    background-color: #f1f1f1;
+.submit-div {
     width: 100px;
     height: 100px;
+    background: url("images/submit.png");
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+}
+
+.submit-div:hover {
+    background: url("images/submithover.png");
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+}
+
+.submit-div:active {
+    background: url("images/submitactive.png");
+    background-repeat: no-repeat;
+    background-size: 70px;
+    background-position: center;
+}
+
+.letter {
+    border: none;
+    background: none;
+    text-align: center;
+    text-transform: uppercase;
+    color: white;   
+    font-size: 45px;
+    font-weight: bold;
+    width: 100px;
+    height: 100px;
+}
+.letter:focus {
+    outline: none;
+}
+
+::placeholder {
+    color: white;
+}
+
+.reset-container {
+    display:flex;
+    justify-content: center;
+}
+
+.reset {
+    margin-top: 20px;
+    margin-right: 5px;
+    border: none;
+    background-color: #1e76b6;
+    color: white;
+    font-weight: bold;
+    height: 40px;
+    width: 80px;
+}
+
+.reset:hover {
+    background-color: #e12f2f;
+}
+
+.reset:active {
+    background-color: #f3dc36;
 }

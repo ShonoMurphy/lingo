@@ -4,48 +4,114 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Lingo</title>
-    <script src="./app.js"></script>
-    <link rel="stylesheet" href="style.css">
+    <script src="./app.js" ></script>
+    <link rel="stylesheet" href="style.css" >
 </head>
 <body>
-    <div class="header">
-        <img class="logo" src="./images/logo.jpg">
+    <div class="header" >
+        <img class="logo" src="./images/logo.jpg" >
     </div>
-    <div class="row" id="row-1">
-        <div class="letter" id=letter-1></div>
-        <div class="letter" id=letter-2></div>
-        <div class="letter" id=letter-3></div>
-        <div class="letter" id=letter-4></div>
-        <div class="letter" id=letter-5></div>
+    <div class="row-container" id="row-container-1" >
+        <div class="row" id="row-1" >
+                <div class="letter-div letter-div-1" id="letter-div-1-1" >
+                    <input type="text" class="letter" id="letter-1-1" maxlength="1" placeholder="." disabled>
+                </div>
+                <div class="letter-div letter-div-1" id="letter-div-1-2" >
+                    <input type="text" class="letter" id="letter-1-2" maxlength="1" placeholder="." onkeypress="changeFocus('1','2')" autofocus>
+                </div>
+                <div class="letter-div letter-div-1" id="letter-div-1-3" >
+                    <input type="text" class="letter" id="letter-1-3" maxlength="1" placeholder="." onkeypress="changeFocus('1','3')" >
+                </div>
+                <div class="letter-div letter-div-1" id="letter-div-1-4" >
+                    <input type="text" class="letter" id="letter-1-4" maxlength="1" placeholder="." onkeypress="changeFocus('1','4')" >
+                </div>
+                <div class="letter-div letter-div-1" id="letter-div-1-5" >
+                    <input type="text" class="letter" id="letter-1-5" maxlength="1" placeholder="." >
+                </div>
+                <div class="submit-div" id="submit-div-1" onclick="submitRow('1')" >
+                </div>
+        </div>
+        <div class="row" id="row-2" >
+            <div class="letter-div letter-div-2" id="letter-div-2-1" >
+                <input type="text" class="letter" id="letter-2-1" maxlength="1" placeholder="" onkeypress="changeFocus('2','1')" >
+            </div>
+            <div class="letter-div letter-div-2" id="letter-div-2-2" >
+                <input type="text" class="letter" id="letter-2-2" maxlength="1" placeholder="" onkeypress="changeFocus('2','2')" >
+            </div>
+            <div class="letter-div letter-div-2" id="letter-div-2-3" >
+                <input type="text" class="letter" id="letter-2-3" maxlength="1" placeholder="" onkeypress="changeFocus('2','3')" >
+            </div>
+            <div class="letter-div letter-div-2" id="letter-div-2-4" >
+                <input type="text" class="letter" id="letter-2-4" maxlength="1" placeholder="" onkeypress="changeFocus('2','4')" >
+            </div>
+            <div class="letter-div letter-div-2" id="letter-div-2-5" >
+                <input type="text" class="letter" id="letter-2-5" maxlength="1" placeholder="" >
+            </div>
+            <div class="submit-div" id="submit-div-2" onclick="submitRow('2')" >
+            </div>
+        </div>
+        <div class="row" id="row-3" >
+            <div class="letter-div letter-div-3" id="letter-div-3-1" >
+                <input type="text" class="letter" id="letter-3-1" maxlength="1" placeholder="" onkeypress="changeFocus('3','1')" >
+            </div>
+            <div class="letter-div letter-div-3" id="letter-div-3-2" >
+                <input type="text" class="letter" id="letter-3-2" maxlength="1" placeholder="" onkeypress="changeFocus('3','2')" >
+            </div>
+            <div class="letter-div letter-div-3" id="letter-div-3-3" >
+                <input type="text" class="letter" id="letter-3-3" maxlength="1" placeholder="" onkeypress="changeFocus('3','3')" >
+            </div>
+            <div class="letter-div letter-div-3" id="letter-div-3-4" >
+                <input type="text" class="letter" id="letter-3-4" maxlength="1" placeholder="" onkeypress="changeFocus('3','4')" >
+            </div>
+            <div class="letter-div letter-div-3" id="letter-div-3-5" >
+                <input type="text" class="letter" id="letter-3-5" maxlength="1" placeholder="" >
+            </div>
+            <div class="submit-div" id="submit-div-3" onclick="submitRow('3')" >
+            </div>
+        </div>
+        <div class="row" id="row-4" >
+            <div class="letter-div letter-div-4" id="letter-div-4-1" >
+                <input type="text" class="letter" id="letter-4-1" maxlength="1" placeholder="" onkeypress="changeFocus('4','1')" >
+            </div>
+            <div class="letter-div letter-div-4" id="letter-div-4-2" >
+                <input type="text" class="letter" id="letter-4-2" maxlength="1" placeholder="" onkeypress="changeFocus('4','2')" >
+            </div>
+            <div class="letter-div letter-div-4" id="letter-div-4-3" >
+                <input type="text" class="letter" id="letter-4-3" maxlength="1" placeholder="" onkeypress="changeFocus('4','3')" >
+            </div>
+            <div class="letter-div letter-div-4" id="letter-div-4-4" >
+                <input type="text" class="letter" id="letter-4-4" maxlength="1" placeholder="" onkeypress="changeFocus('4','4')" >
+            </div>
+            <div class="letter-div letter-div-4" id="letter-div-4-5" >
+                <input type="text" class="letter" id="letter-4-5" maxlength="1" placeholder="" >
+            </div>
+            <div class="submit-div" id="submit-div-4" onclick="submitRow('4')" >
+            </div>
+        </div>
+        <div class="row" id="row-5" >
+            <div class="letter-div letter-div-5" id="letter-div-5-1" >
+                <input type="text" class="letter" id="letter-5-1" maxlength="1" placeholder="" onkeypress="changeFocus('5','1')" >
+            </div>
+            <div class="letter-div letter-div-5" id="letter-div-5-2" >
+                <input type="text" class="letter" id="letter-5-2" maxlength="1" placeholder="" onkeypress="changeFocus('5','2')" >
+            </div>
+            <div class="letter-div letter-div-5" id="letter-div-5-3" >
+                <input type="text" class="letter" id="letter-5-3" maxlength="1" placeholder="" onkeypress="changeFocus('5','3')" >
+            </div>
+            <div class="letter-div letter-div-5" id="letter-div-5-4" >
+                <input type="text" class="letter" id="letter-5-4" maxlength="1" placeholder="" onkeypress="changeFocus('5','4')" >
+            </div>
+            <div class="letter-div letter-div-5" id="letter-div-5-5" >
+                <input type="text" class="letter" id="letter-5-5" maxlength="1" placeholder="" >
+            </div>
+            <div class="submit-div" id="submit-div-5" onclick="submitRow('5')" >
+            </div>
+        </div>
     </div>
-    <div class="row" id="row-2">
-        <div class="letter" id=letter-6></div>
-        <div class="letter" id=letter-7></div>
-        <div class="letter" id=letter-8></div>
-        <div class="letter" id=letter-9></div>
-        <div class="letter" id=letter-10></div>
-    </div>
-    <div class="row" id="row-3">
-        <div class="letter" id=letter-11></div>
-        <div class="letter" id=letter-12></div>
-        <div class="letter" id=letter-13></div>
-        <div class="letter" id=letter-14></div>
-        <div class="letter" id=letter-15></div>
-    </div>
-    <div class="row" id="row-4">
-        <div class="letter" id=letter-16></div>
-        <div class="letter" id=letter-17></div>
-        <div class="letter" id=letter-18></div>
-        <div class="letter" id=letter-19></div>
-        <div class="letter" id=letter-20></div>
-    </div>
-    <div class="row" id="row-5">
-        <div class="letter" id=letter-21></div>
-        <div class="letter" id=letter-22></div>
-        <div class="letter" id=letter-23></div>
-        <div class="letter" id=letter-24></div>
-        <div class="letter" id=letter-25></div>
-    </div>
+    <div class="reset-container">
+        <button class="reset" onclick="resetButton()" >RESET</button>
+        <button class="reset" onclick="testButton()" >TEST</button>
+    </div>   
 
 </body>
 </html>
