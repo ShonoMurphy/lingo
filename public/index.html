@@ -13,6 +13,9 @@
     <link rel="manifest" href="/site.webmanifest">
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="theme-color" content="#ffffff">
+    <script src="/__/firebase/8.0.0/firebase-app.js"></script>
+    <script src="/__/firebase/8.0.0/firebase-analytics.js"></script>
+    <script src="/__/firebase/init.js"></script>
 </head>
 <body>
     <audio id="audioIntro">
@@ -25,7 +28,7 @@
     <div class="row-container" id="row-container-1" >
         <div class="row" id="row-1" >
                 <div class="letter-div letter-div-1" id="letter-div-1-1" >
-                    <input type="text" class="letter" id="letter-1-1" maxlength="1" placeholder="" disabled>
+                    <input type="text" class="letter" id="letter-1-1" maxlength="1" placeholder="" onkeypress="changeFocus('1','1')" >
                 </div>
                 <div class="letter-div letter-div-1" id="letter-div-1-2" >
                     <input type="text" class="letter" id="letter-1-2" maxlength="1" placeholder="" onkeypress="changeFocus('1','2')" autofocus>

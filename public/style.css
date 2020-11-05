@@ -1,7 +1,6 @@
 .header {
     display: flex;
     justify-content: center;
-    padding-left: 15px;
 }
 .logo {
     max-width: 30%;
